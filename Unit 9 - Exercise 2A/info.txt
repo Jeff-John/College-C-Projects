@@ -1,0 +1,17 @@
+35.2 Unit 9 - Exercise 2A (4/8)
+In this exercise, you will have to complete the class Playlist. Playlist has 4 private attributes:
+
+name (string)
+maxSize (int): the maximum number of songs in the playlist
+length(int): the number of songs currently in the playlist
+list (*string): pointer to dynamically allocate the list of songs (array of size maxSize)
+Add the following methods to the class:
+
+Constructor with two parameters (string, int). The string parameter is the name of the playlist, the integer parameter is the maximum number of songs. If this integer parameter is not positive, set it to be 10. In this function, you must also set the current number of songs to 0 and allocate the list array.
+Copy constructor. Make sure to produce a deep copy.
+Operator =. Make sure to produce a deep copy and no memory leaks.
+Operator >. This operator compares 2 Playlist objects and returns true if the left operand has more songs in the list.
+Destructor. Delete all dynamic memory.
+Do not modify the functions already given to you. You can leave the main function empty or use it for your own development/testing, but do not delete it.
+
+Deviating from the instructions (e.g. changing the function parameters) will result in partial or complete point deduction, proportional to the severity of the infraction.

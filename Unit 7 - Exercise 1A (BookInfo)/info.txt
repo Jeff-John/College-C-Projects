@@ -1,0 +1,33 @@
+33.1 Unit 7 - Exercise 1A (3/11)
+
+Define a class, named, BookInfo, that contains
+
+(1) three private members: title (a string), author (a string), yearPublished (an integer)
+
+(2) the corresponding accessors and mutators for the above member variables in the public section
+
+string getTitle(); -- return the title of a book
+string getAuthor(); -- return the author
+int getYearPublished(); -- return the year of publication
+void setTitle(string); -- set the title of a book via the input string parameter
+void setAuthor(string); -- set the author
+void setYearPublished(int); -- set the year of publication
+(3) two constructors
+
+the default constructor that sets both the title and author of the book as "Unknown" and the year of publication as 2021.
+an overloaded constructor that takes three parameters as input in the order of (string inTitle, string inAuthor, int year) and initialize the corresponding member variables of the book object
+(4) a void printOut() function that outputs the information of a book in the following format:
+
+Title: <the title of the book>, Author: <the author of the book>, Year of Publication: <the year of publication>
+In the main() function,
+
+declare a BookInfo object and set its title to be "The Hobbit", its author to be "J. R. R. Tolkien", and its yearPublished as "1937". Then output this book information as:
+Title: The Hobbit
+Author: J. R. R. Tolkien
+Year of Publication: 1937
+Note: Please do not hard-code the above output. Instead, you should call the accessors to get the information for output.
+
+declare a BookInfo array with three books at places where appropriate to make the code work
+The main is commented in the initial template to allow you to test the class first (Test cases 4-8). After passing these test cases, uncomment and complete the main. Uncommenting the main while your class is still incomplete will lead to compiler errors.
+
+Hint: both the title and the author's name of a book may contain one or more whitespaces, thus, you should use getline() for their input. Also, remember to call cin.ignore() before the getline() function if you use a cin>> statement before the getline() to ensure the correct input.

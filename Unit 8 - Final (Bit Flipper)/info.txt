@@ -1,0 +1,28 @@
+40.14 Unit 8 - Final (1 of 1)
+You MUST use pointers and dynamic allocation to complete this exercise to receive points
+
+Write a program that takes a positive integer as input, indicating the the number of bits that you will have in your array.
+
+(1) Create a dynamic integer array based on the value of the input integer. Fill this array with 0s. If the input integer is less than 1, the program will output "Invalid Size. Exiting Program…" and exit the program.
+
+(2) In the main(), you will accept three more integers from the user. Each input will represent intervals at which the bits will be flipped. After each input, you will call the flipBit(). In this function, you will iterate through the array, flipping bits based on the input, always starting from the bit at index 0 (which means this one flips every time). Flipping a bit means if the value is 1, then change it 0 and vice versa. The value should always be either 0 or 1.
+
+For example, if the user enters '2' into a zero array of size 6, then it would look like this:
+
+101010
+Every 2nd bit will be flipped, starting with the first bit in the example. If the input was '3', then every 3rd bit will be flipped, starting with the first bit in the array. Do NOT reset the array to back to all 0s after each input. The only time you will change the content in the array is in the flipBit().
+
+(3) After each time you call the flipBit(), you will then output or print the whole array to show what bits were flipped.
+
+If the user inputs a number that is larger than or equal to the array size or if they input a number that is less than 1, you must output "Invalid number of bits to be skipped has been entered." and then continue the program.
+
+Example Program:
+
+6 2 3 7                   //Input of array size first, then the bits that are skipped. The initial array (size 6) is set to 000000
+101010                    //Flip every 2nd bit (index 0, 2 and 4)
+001110                    //Flip every 3rd bit (index 0 and 3)
+Invalid number of bits to be skipped has been entered.     //7 is larger than the array size. 
+You MUST define and call a flipBit() function to flip the bits in the array. The function takes as input an int pointer to the dynamic array, the size of the array, and the amount of bits to skip.
+
+void flipBit(int *array, int size, int nSkips);
+NOTE THAT: you will receive 20 points deduction if you do not release the dynamic array before the end of the program or your program has memory leaking issue during execution.

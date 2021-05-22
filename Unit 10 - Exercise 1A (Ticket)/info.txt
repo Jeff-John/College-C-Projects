@@ -1,0 +1,24 @@
+36.1 Unit 10 - Exercise 1A (4/8)
+Given a Ticket class (defined in "Ticket.h" and "Ticket.cpp"), derived a new class, called MovieTicket from Ticket. The MovieTicket class will include
+
+(1) Three additional private member variables
+
+movieName (string)
+rowID (int)
+columnID (int)
+(2) The accessors and mutators of these three member variables
+
+string getMovieName();
+int getRowID();
+int getColumnID();
+void setMovieName(string);
+void setRowID(int);
+void setColumnID(int);
+(3) Two constructors
+
+A default constructor that calls the default constructor of Ticket class then sets the movieName as "Unknown", rowID as 1 and columnID as 1.
+An overloaded constructor that takes five parameters as input in the order of (string _dateTime, float _price, string _movieName, int _row, int _column). This constructor will call the constructor of Ticket with two parameters and set the dateTime and price members of the Ticket. It then sets the three member variables of MovieTicket class based on the other three parameters from the input.
+(4) The printTicket function that overrides the printTicket function defined in the base Ticket class to output the movie ticket information in the following format
+
+Movie ticket for <movieName> at <dateTime>. Seat Info: Row <rowID>, Column <columnID>. Ticket price: $<price in decimal format with two digit precision>
+The main is commented in the initial template to allow you to test the class first (Test cases 1-5). After passing these test cases, uncomment and complete the main. Uncommenting the main while your class is still incomplete will lead to compiler errors.

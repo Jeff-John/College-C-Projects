@@ -1,0 +1,38 @@
+37.1 Unit 11 - Exercise 1A (4/15)
+Complete the following classes based on the instructions to achieve polymorphism for this exercise.
+
+Ticket class (Ticket.h)
+Ticket class is an abstract class. Specify the following two functions as pure virtual functions.
+
+int getFinalPrice();
+string getTicketInfo();
+Define the Ticket destructor. This destructor will output a message
+
+Ticket is expired.
+MovieTicket class (MovieTicket.h /.cpp)
+MovieTicket is derived from the Ticket class. Please declare the following functions in the MovieTicket class (in MovieTicket.h) and provide their implementations in (MovieTicket.cpp)
+
+int getFinalPrice(); This function will return the price on the ticket plus a processing fee of $1
+string getTicketInfo(); This function will return a string encoding the ticket information in the following format
+Movie ticket for <movieName> at <dateTime>. Seat Info: Row <rowID>, Column <columnID>. Ticket price: $<final price, i.e., price+prcessing fee>
+Hint: use addition operator (+) to concatenate different information into one string. Use to_string(int) to convert an integer into a string.
+
+the destructor that outputs the following message
+The movie ticket has been used.
+ConcertTicket class (ConcertTicket.h /.cpp)
+ConcertTicket is derived from the Ticket class. Please declare the following functions in the ConcertTicket class (in ConcertTicket.h) and provide their implementations in (ConcertTicket.cpp)
+
+int getFinalPrice(); This function will return the price on the ticket plus a processing fee of $5
+string getTicketInfo(); This function will return a string encoding the ticket information in the following format
+Concert ticket for <concertName> at <dateTime>. Seat Info: Row <rowID>, Column <columnID>. Ticket price: $<final price, i.e., price+prcessing fee>
+the destructor that outputs the following message
+The concert ticket has been used.
+TicketMaster class (TicketMaster.cpp)
+The TicketMaster class consists of a list of Ticket pointers, tickets, that will be used to associate with either MovieTicket objects or ConcertTicket objects. tickets is a static array with fixed size (MAX_SIZE=100). Complete the following functions.
+
+void purchaseTicket(Ticket *); This function will take a Ticket pointer that may pointer to either a MovieTicket object or a ConcertTicket object as input. The function will then add this pointer to the tickets array and increase the ticketsSold count.
+
+void computeBoxOffice(); This function will call the respective getPrice() functions of the objects that the individual tickets' pointers are pointing to and compute the sum of the prices of those sold tickets, then assign the total amount to the boxOffice member variable.
+
+main() function
+The main is commented in the initial template to allow you to test the classes first (Test cases 1-5). After passing these test cases, uncomment and complete the main. Uncommenting the main while your class is still incomplete will lead to compiler errors.

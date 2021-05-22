@@ -1,0 +1,34 @@
+37.3 Unit 11 - Exercise 3A (4/29)
+Complete the following classes based on the instructions to achieve polymorphism for this exercise.
+
+Employee class (employee.h/.cpp)
+Employee class is an abstract class. You will need to add a double getTaxes(); function as a pure virtual function.
+
+Additionally, you may need to make some function in Employee virtual (check derived classes SalaryEmployee and HourlyEmployee to see what functions have been overwritten or need to be virtual to achieve the correct behavior). 5 point will be deducted for every function that does NOT need to be virtual if it is virtual in the submission.
+
+SalaryEmployee class (salaryEmployee.h/.cpp)
+SalaryEmployee is a derived class of Employee. Please declare the following functions in the SalaryEmployee class (salaryEmployee.h) and provide their respective implementation (in salaryEmployee.cpp), respectively.
+
+double getTaxes(); This function returns as a double the taxes that the employee has to pay, equal to 25% of the year salary.
+string getEmployeeInfo(); This function returns the following string:
+<name>, SSN: <ssn>, year salary: <yearSalary>
+You must complete the definition of this function to complete the output string.
+
+SalaryEmployee destructor. This destructor will output a message
+Salary data destroyed.
+HourlyEmployee class (hourlyEmployee.h/.cpp)
+HourlyEmployee is a derived class of Employee. Please declare the following functions in the HourlyEmployee class (hourlyEmployee.h) and provide their respective implementation (in HourlyEmployee.cpp), respectively.
+
+double getTaxes(); This function returns as a double the taxes that the employee has to pay. For an hourly employee, this number is 0 if they worked less than 100 hours, and 30% of the income (as wage * hours) otherwise.
+string getEmployeeInfo(); This function returns the following string:
+<name>, SSN: <ssn>, salary (this month): <wage * hours>
+You must complete the definition of this function to complete the output string.
+
+HourlyEmployee destructor. This destructor will output a message
+Hourly data destroyed.
+taxCollector function (main.cpp)
+the taxCollector function has to be implemented in the main file, and allows to compute the taxes to be paid by a group (array) of employees of various type. The function takes as input an array of pointers of type Employee and the size of the array. It then iterates through the array to compute and add together the taxes paid by each employee, and returns this number.
+
+Hint: since you are working with an array of pointers, consider what would be the best operator to access the getTaxes function (. or ->).
+
+The main is commented in the initial template to allow you to test the classes first (Test cases 1-6). After passing these test cases, uncomment the main. Uncommenting the main while your classes are still incomplete may lead to compiler errors.
